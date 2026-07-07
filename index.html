@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header with theme toggle -->
+        <div class="header">
+            <h1>Scientific Calculator</h1>
+            <button id="themeToggle" class="theme-toggle" title="Toggle Dark/Light Mode">
+                <span class="theme-icon">🌙</span>
+            </button>
+        </div>
+
+        <!-- Main calculator -->
+        <div class="calculator">
+            <!-- Display Screen -->
+            <div class="display-section">
+                <input 
+                    type="text" 
+                    id="display" 
+                    class="display" 
+                    placeholder="0" 
+                    readonly
+                >
+                <div class="display-info">
+                    <span id="expression" class="expression"></span>
+                </div>
+            </div>
+
+            <!-- Buttons Container -->
+            <div class="buttons-grid">
+                <!-- Row 1: Function buttons -->
+                <button class="btn func-btn" data-function="sin">sin</button>
+                <button class="btn func-btn" data-function="cos">cos</button>
+                <button class="btn func-btn" data-function="tan">tan</button>
+                <button class="btn func-btn" data-function="sqrt">√</button>
+                <button class="btn func-btn" data-function="log">log</button>
+
+                <!-- Row 2: Function buttons -->
+                <button class="btn func-btn" data-function="asin">asin</button>
+                <button class="btn func-btn" data-function="acos">acos</button>
+                <button class="btn func-btn" data-function="atan">atan</button>
+                <button class="btn func-btn" data-function="pow">x^y</button>
+                <button class="btn func-btn" data-function="ln">ln</button>
+
+                <!-- Row 3: Constants and operations -->
+                <button class="btn func-btn" data-function="pi">π</button>
+                <button class="btn func-btn" data-function="e">e</button>
+                <button class="btn func-btn" data-function="factorial">n!</button>
+                <button class="btn func-btn" data-function="percent">%</button>
+                <button class="btn operator-btn" data-operator="/">÷</button>
+
+                <!-- Row 4: Numbers and operations -->
+                <button class="btn number-btn" data-number="7">7</button>
+                <button class="btn number-btn" data-number="8">8</button>
+                <button class="btn number-btn" data-number="9">9</button>
+                <button class="btn operator-btn" data-operator="*">×</button>
+                <button class="btn func-btn" data-function="backspace">⌫</button>
+
+                <!-- Row 5: Numbers and operations -->
+                <button class="btn number-btn" data-number="4">4</button>
+                <button class="btn number-btn" data-number="5">5</button>
+                <button class="btn number-btn" data-number="6">6</button>
+                <button class="btn operator-btn" data-operator="-">−</button>
+                <button class="btn func-btn" data-function="ce">CE</button>
+
+                <!-- Row 6: Numbers and operations -->
+                <button class="btn number-btn" data-number="1">1</button>
+                <button class="btn number-btn" data-number="2">2</button>
+                <button class="btn number-btn" data-number="3">3</button>
+                <button class="btn operator-btn" data-operator="+">+</button>
+                <button class="btn func-btn" data-function="clear">C</button>
+
+                <!-- Row 7: Zero, decimal, equals -->
+                <button class="btn number-btn long" data-number="0">0</button>
+                <button class="btn number-btn" data-number=".">.</button>
+                <button class="btn operator-btn" data-operator="=">=</button>
+                <button class="btn func-btn" data-function="toggleSign">+/−</button>
+            </div>
+        </div>
+
+        <!-- History Panel -->
+        <div class="history-panel">
+            <div class="history-header">
+                <h2>History</h2>
+                <button id="clearHistory" class="clear-btn" title="Clear history">🗑️</button>
+            </div>
+            <div id="history" class="history-list">
+                <p class="empty-message">No calculations yet</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
